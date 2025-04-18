@@ -28,7 +28,7 @@ a.MuiButton-contained:hover {
 }
 
 .activeNavLink {
-  background-color: #f2f2f2 !important;
+  background-color: #4b4b4b !important;
   pointer-events: none;
 }
 

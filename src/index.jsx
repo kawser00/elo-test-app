@@ -11,13 +11,24 @@ import { ethers } from 'ethers';
 
 const theme = createTheme({
   palette: {
-    mode: 'light',
+    mode: 'dark',
     primary: {
       //main: '#1a90ff',
       main: '#1cac1d',
     },
+    grey: {
+      100: '#5b5b5b',
+    },
+    background: {
+      default: '#121212', // Dark background
+    },
+    text: {
+      primary: '#ffffff',
+      secondary: '#b3b3b3',
+    },
     neutral: {
-      main: '#f8f9f9',
+      // main: '#f8f9f9',
+      main: '#2d2d2d', // Darker neutral for dark mode
     },
   },
   typography: {

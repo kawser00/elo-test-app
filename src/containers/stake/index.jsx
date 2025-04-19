@@ -2,9 +2,9 @@ import { Fragment, useState } from 'react';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
-import StackingForm from '../../components/stake/StackingForm';
 import { Button, Card, CardContent, Grid, Tab, Tabs } from '@mui/material';
 import StakingForm from '../../components/stake/StackingForm';
+import StakingRewards from '../../components/stake/StakingRewards';
 
 export const stakingTiers = {
   bronze: {
@@ -36,7 +36,7 @@ export const stakingTiers = {
 export default function Stake() {
   const [tabValue, setTabValue] = useState(0);
 
-  const handleTabChange = (event, newValue) => {
+  const handleTabChange = (_event, newValue) => {
     setTabValue(newValue);
   };
 
@@ -108,7 +108,12 @@ export default function Stake() {
                           <Typography variant="body2" color="text.secondary">
                             You have 0 ELO tokens staked
                           </Typography>
-                          <Button sx={{borderRadius:'5px'}} variant="contained" fullWidth disabled>
+                          <Button
+                            sx={{ borderRadius: '5px' }}
+                            variant="contained"
+                            fullWidth
+                            disabled
+                          >
                             Connect Wallet to Unstake
                           </Button>
                         </Box>
@@ -117,6 +122,9 @@ export default function Stake() {
                   </Box>
                 </CardContent>
               </Card>
+              <Box sx={{ mt: 4 }}>
+                <StakingRewards />
+              </Box>
             </Grid>
             <Grid item xs={12} md={5}></Grid>
           </Grid>

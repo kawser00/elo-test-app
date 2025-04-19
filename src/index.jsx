@@ -23,7 +23,7 @@ const theme = createTheme({
       default: '#121212', // Dark background
     },
     text: {
-      primary: '#ffffff',
+      primary: '#ffffff !important',
       secondary: '#b3b3b3',
     },
     neutral: {

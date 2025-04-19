@@ -62,7 +62,7 @@ export default function StakingGuide({ open, handleClose }) {
         style: { borderRadius: 25, boxShadow: 'none' },
       }}
     >
-      <DialogTitle id="alert-dialog-title" sx={{ p: 3 }}>
+      <DialogTitle id="alert-dialog-title" sx={{ p: 3 }} color="text.primary">
         How To Stake
       </DialogTitle>
       <DialogContent>
@@ -73,7 +73,11 @@ export default function StakingGuide({ open, handleClose }) {
               aria-controls="panel1bh-content"
               id="panel1bh-header"
             >
-              <Typography variant="h6" sx={{ width: '50%', flexShrink: 0, fontWeight: 500 }}>
+              <Typography
+                variant="h6"
+                color="text.primary"
+                sx={{ width: '50%', flexShrink: 0, fontWeight: 500 }}
+              >
                 {data.title}
               </Typography>
             </AccordionSummary>

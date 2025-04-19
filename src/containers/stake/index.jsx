@@ -2,9 +2,10 @@ import { Fragment, useState } from 'react';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
-import { Button, Card, CardContent, Grid, Tab, Tabs } from '@mui/material';
+import { Button, Card, CardContent, CardHeader, Grid, Tab, Tabs } from '@mui/material';
 import StakingForm from '../../components/stake/StackingForm';
 import StakingRewards from '../../components/stake/StakingRewards';
+import StakingStats from '../../components/stake/StakingStats';
 
 export const stakingTiers = {
   bronze: {
@@ -78,11 +79,13 @@ export default function Stake() {
                   borderColor: 'grey.100',
                 }}
               >
-                <CardContent>
-                  <Box>
-                    <Typography variant="h5" component="div" color="text.primary" sx={{ mb: 1 }}>
+                <CardHeader
+                  title={
+                    <Typography variant="h5" component="div" color="text.primary">
                       Stake Your Tokens
                     </Typography>
+                  }
+                  subheader={
                     <Typography
                       variant="caption"
                       color="text.secondary"
@@ -92,7 +95,9 @@ export default function Stake() {
                       the pool. First you must approve you've $ for use on the staking contract,
                       then enter an amount and press stake.
                     </Typography>
-                  </Box>
+                  }
+                />
+                <CardContent>
                   <Box sx={{ width: '100%' }}>
                     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                       <Tabs value={tabValue} onChange={handleTabChange} variant="fullWidth">
@@ -126,7 +131,9 @@ export default function Stake() {
                 <StakingRewards />
               </Box>
             </Grid>
-            <Grid item xs={12} md={5}></Grid>
+            <Grid item xs={12} md={5}>
+              <StakingStats stakingTiers={stakingTiers} />
+            </Grid>
           </Grid>
         </Container>
       </Box>

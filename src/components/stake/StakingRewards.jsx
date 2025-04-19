@@ -1,6 +1,5 @@
-import { Box, Button, Card, CardContent, Tab, Tabs, Typography } from "@mui/material";
+import { Box, Button, Card, CardContent, CardHeader, Tab, Tabs, Typography } from "@mui/material";
 import { useState } from "react";
-
 
 const StakingRewards = () => {
   const [tabValue, setTabValue] = useState(0);
@@ -16,11 +15,13 @@ const StakingRewards = () => {
         borderColor: 'grey.100',
       }}
     >
-      <CardContent>
-        <Box>
+      <CardHeader
+        title={
           <Typography variant="h5" component="div" color="text.primary">
             Your Staking Rewards
           </Typography>
+        }
+        subheader={
           <Typography
             variant="caption"
             color="text.secondary"
@@ -28,9 +29,11 @@ const StakingRewards = () => {
           >
             Track and claim your earned rewards
           </Typography>
-        </Box>
+        }
+      />
+      <CardContent>
         <Box sx={{ width: '100%' }}>
-          <Box sx={{ borderBottom: 1, borderColor: 'divider', mt: 2 }}>
+          <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
             <Tabs value={tabValue} onChange={handleTabChange} variant="fullWidth">
               <Tab label="Active Stake" />
               <Tab label="History" />

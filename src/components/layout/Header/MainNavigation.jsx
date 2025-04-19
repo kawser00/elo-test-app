@@ -18,7 +18,10 @@ import SideDrawer from './SideDrawer';
 //   { label: "Gallery", href: "/gallery" },
 // ]
 
-const mainLinks = [{ label: 'Home', href: '/' }];
+const mainLinks = [
+  { label: 'Home', href: '/' },
+  { label: 'Stake', href: '/stake' },
+];
 
 const presaleLink = {
   label: 'Pre-sale',
@@ -30,8 +33,8 @@ const presaleLink = {
 //   href: "https://bridge.poly.network/token/"
 // }
 
-//const comingSoonLink = ["Swap", "Mint", "Stake"];
-const comingSoonLink = ['Stake'];
+const comingSoonLink = ["Swap"];
+// const comingSoonLink = ['Stake'];
 
 const moreMenuLinks = [
   // { label: "Transactions", href: "/transactions" },

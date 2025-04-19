@@ -6,6 +6,7 @@ import { Button, Card, CardContent, CardHeader, Grid, Tab, Tabs } from '@mui/mat
 import StakingForm from '../../components/stake/StackingForm';
 import StakingRewards from '../../components/stake/StakingRewards';
 import StakingStats from '../../components/stake/StakingStats';
+import StakingTiers from '../../components/stake/StakingTiers';
 
 export const stakingTiers = {
   bronze: {
@@ -133,6 +134,7 @@ export default function Stake() {
             </Grid>
             <Grid item xs={12} md={5}>
               <StakingStats stakingTiers={stakingTiers} />
+              <StakingTiers stakingTiers={stakingTiers} />
             </Grid>
           </Grid>
         </Container>
